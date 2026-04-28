@@ -1255,6 +1255,9 @@
     try { window.parent.scrollTo(0, 0); } catch(e) {}
     try { window.parent.document.body.scrollTop = 0; } catch(e) {}
     try { window.parent.document.documentElement.scrollTop = 0; } catch(e) {}
+    // Scroll the header into view
+    var header = document.querySelector('header');
+    if (header) header.scrollIntoView({behavior: 'auto', block: 'start'});
   }
 
   function showHome() {
