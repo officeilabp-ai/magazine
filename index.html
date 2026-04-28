@@ -579,7 +579,7 @@
 <!-- ══════════════════════════════════════════ -->
 <!-- ARTICLE: שי אפשטיין -->
 <!-- ══════════════════════════════════════════ -->
-<div id="article-shai" class="page">
+<div id="article-shai" class="page"><div id="top-shai"></div>
   <div class="article-page">
     <div class="article-meta">
       <div class="article-number">01</div>
@@ -639,7 +639,7 @@
 <!-- ══════════════════════════════════════════ -->
 <!-- ARTICLE: עדי פרקש -->
 <!-- ══════════════════════════════════════════ -->
-<div id="article-adi" class="page">
+<div id="article-adi" class="page"><div id="top-adi"></div>
   <div class="article-page">
     <div class="article-meta">
       <div class="article-number">02</div>
@@ -772,7 +772,7 @@
 <!-- ══════════════════════════════════════════ -->
 <!-- ARTICLE: נעמה בן-שמחון -->
 <!-- ══════════════════════════════════════════ -->
-<div id="article-naama" class="page">
+<div id="article-naama" class="page"><div id="top-naama"></div>
   <div class="article-page">
     <div class="article-meta">
       <div class="article-number">03</div>
@@ -925,7 +925,7 @@
 <!-- ══════════════════════════════════════════ -->
 <!-- ARTICLE: חן מונדר -->
 <!-- ══════════════════════════════════════════ -->
-<div id="article-chen" class="page">
+<div id="article-chen" class="page"><div id="top-chen"></div>
   <div class="article-page">
     <div class="article-meta">
       <div class="article-number">04</div>
@@ -978,7 +978,7 @@
 <!-- ══════════════════════════════════════════ -->
 <!-- ARTICLE: חן מונדר 2 -->
 <!-- ══════════════════════════════════════════ -->
-<div id="article-chen2" class="page">
+<div id="article-chen2" class="page"><div id="top-chen2"></div>
   <div class="article-page">
     <div class="article-meta">
       <div class="article-number">04ב</div>
@@ -1032,7 +1032,7 @@
 <!-- ══════════════════════════════════════════ -->
 <!-- ARTICLE: רועי מליח -->
 <!-- ══════════════════════════════════════════ -->
-<div id="article-roi" class="page">
+<div id="article-roi" class="page"><div id="top-roi"></div>
   <div class="article-page">
     <div class="article-meta">
       <div class="article-number">05</div>
@@ -1093,7 +1093,7 @@
 <!-- ══════════════════════════════════════════ -->
 <!-- ARTICLE: ד"ר מיכאלה מעוז -->
 <!-- ══════════════════════════════════════════ -->
-<div id="article-michaela" class="page">
+<div id="article-michaela" class="page"><div id="top-michaela"></div>
   <div class="article-page">
     <div class="article-meta">
       <div class="article-number">06</div>
@@ -1148,7 +1148,7 @@
 <!-- ══════════════════════════════════════════ -->
 <!-- ARTICLE: הוד שחם -->
 <!-- ══════════════════════════════════════════ -->
-<div id="article-hod" class="page">
+<div id="article-hod" class="page"><div id="top-hod"></div>
   <div class="article-page">
     <div class="article-meta">
       <div class="article-number">07</div>
@@ -1197,7 +1197,7 @@
 <!-- ══════════════════════════════════════════ -->
 <!-- ARTICLE: דנה טולר -->
 <!-- ══════════════════════════════════════════ -->
-<div id="article-dana" class="page">
+<div id="article-dana" class="page"><div id="top-dana"></div>
   <div class="article-page">
     <div class="article-meta">
       <div class="article-number">08</div>
@@ -1271,6 +1271,11 @@
       el.classList.add('active');
       document.getElementById('backBtn').classList.add('visible');
       scrollTop();
+      setTimeout(function() {
+        var anchor = document.getElementById('top-' + id);
+        if (anchor) anchor.scrollIntoView({behavior: 'auto', block: 'start'});
+        scrollTop();
+      }, 50);
     }
   }
 
