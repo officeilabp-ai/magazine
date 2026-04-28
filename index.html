@@ -1248,11 +1248,20 @@
 <script>
   const articleOrder = ['shai', 'adi', 'naama', 'chen', 'chen2', 'roi', 'michaela', 'hod', 'dana'];
 
+  function scrollTop() {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    try { window.parent.scrollTo(0, 0); } catch(e) {}
+    try { window.parent.document.body.scrollTop = 0; } catch(e) {}
+    try { window.parent.document.documentElement.scrollTop = 0; } catch(e) {}
+  }
+
   function showHome() {
     document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
     document.getElementById('home').classList.add('active');
     document.getElementById('backBtn').classList.remove('visible');
-    window.scrollTo(0, 0);
+    scrollTop();
   }
 
   function showArticle(id) {
@@ -1261,9 +1270,11 @@
     if (el) {
       el.classList.add('active');
       document.getElementById('backBtn').classList.add('visible');
-      window.scrollTo(0, 0);
+      scrollTop();
     }
   }
+
+  function scrollToTop() { scrollTop(); }
 </script>
 </body>
 </html>
