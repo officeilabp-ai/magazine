@@ -414,7 +414,7 @@
   .back-to-top {
     position: fixed;
     bottom: 2rem;
-    left: 2rem;
+    right: 2rem;
     background: var(--accent2);
     color: white;
     border: none;
@@ -429,7 +429,10 @@
     box-shadow: 0 3px 12px rgba(0,0,0,0.25);
     z-index: 999;
     touch-action: manipulation;
+    opacity: 0.85;
+    transition: opacity 0.2s;
   }
+  .back-to-top:hover { opacity: 1; }
   .back-to-top.visible { display: flex; }
 </style>
 </head>
@@ -451,7 +454,12 @@
   </div>
 </header>
 
-<button class="back-to-top" id="backToTop" onclick="scrollToTop()" title="חזרה לראש הדף">↑</button>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" title="חזרה לראש הדף">
+  <span style="display:flex;flex-direction:column;align-items:center;gap:1px;">
+    <span style="font-size:1.1rem;line-height:1;">↑</span>
+    <span style="font-size:0.5rem;letter-spacing:0.05em;line-height:1;">למעלה</span>
+  </span>
+</button>
 <hr class="divider">
 
 <!-- ══════════════════════════════════════════ -->
@@ -624,7 +632,7 @@
     </div>
 
     <div style="text-align:center;margin-top:2rem;">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTop=0;document.documentElement.scrollTop=0;" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
+      <button onclick="var h=document.querySelector('.page.active');if(h){h.scrollIntoView({behavior:'smooth',block:'start'});}" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
     </div>
     <div class="article-nav">
       <button class="nav-btn" disabled>← הקודם</button>
@@ -757,7 +765,7 @@
     </div>
 
     <div style="text-align:center;margin-top:2rem;">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTop=0;document.documentElement.scrollTop=0;" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
+      <button onclick="var h=document.querySelector('.page.active');if(h){h.scrollIntoView({behavior:'smooth',block:'start'});}" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
     </div>
     <div class="article-nav">
       <button class="nav-btn" onclick="showArticle('shai')">→ הקודם</button>
@@ -910,7 +918,7 @@
     </div>
 
     <div style="text-align:center;margin-top:2rem;">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTop=0;document.documentElement.scrollTop=0;" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
+      <button onclick="var h=document.querySelector('.page.active');if(h){h.scrollIntoView({behavior:'smooth',block:'start'});}" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
     </div>
     <div class="article-nav">
       <button class="nav-btn" onclick="showArticle('adi')">→ הקודם</button>
@@ -963,7 +971,7 @@
     </div>
 
     <div style="text-align:center;margin-top:2rem;">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTop=0;document.documentElement.scrollTop=0;" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
+      <button onclick="var h=document.querySelector('.page.active');if(h){h.scrollIntoView({behavior:'smooth',block:'start'});}" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
     </div>
     <div class="article-nav">
       <button class="nav-btn" onclick="showArticle('naama')">→ הקודם</button>
@@ -1017,7 +1025,7 @@
     </div>
 
     <div style="text-align:center;margin-top:2rem;">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTop=0;document.documentElement.scrollTop=0;" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
+      <button onclick="var h=document.querySelector('.page.active');if(h){h.scrollIntoView({behavior:'smooth',block:'start'});}" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
     </div>
     <div class="article-nav">
       <button class="nav-btn" onclick="showArticle('chen')">→ הקודם</button>
@@ -1078,7 +1086,7 @@
     </div>
 
     <div style="text-align:center;margin-top:2rem;">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTop=0;document.documentElement.scrollTop=0;" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
+      <button onclick="var h=document.querySelector('.page.active');if(h){h.scrollIntoView({behavior:'smooth',block:'start'});}" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
     </div>
     <div class="article-nav">
       <button class="nav-btn" onclick="showArticle('chen2')">→ הקודם</button>
@@ -1133,7 +1141,7 @@
     </div>
 
     <div style="text-align:center;margin-top:2rem;">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTop=0;document.documentElement.scrollTop=0;" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
+      <button onclick="var h=document.querySelector('.page.active');if(h){h.scrollIntoView({behavior:'smooth',block:'start'});}" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
     </div>
     <div class="article-nav">
       <button class="nav-btn" onclick="showArticle('roi')">→ הקודם</button>
@@ -1182,7 +1190,7 @@
     </div>
 
     <div style="text-align:center;margin-top:2rem;">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTop=0;document.documentElement.scrollTop=0;" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
+      <button onclick="var h=document.querySelector('.page.active');if(h){h.scrollIntoView({behavior:'smooth',block:'start'});}" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
     </div>
     <div class="article-nav">
       <button class="nav-btn" onclick="showArticle('michaela')">→ הקודם</button>
@@ -1211,7 +1219,7 @@
       <img src="https://static.wixstatic.com/media/e07c18_ba2059ce5eae471daca16654afa0b93a~mv2.jpg" alt="ציור דנה טולר" style="width:100%;object-fit:cover;border-radius:4px;margin-bottom:0.5rem;display:block;">
       <img src="https://static.wixstatic.com/media/e07c18_2e12b4aa1a74425ba8f323bc698e9dc3~mv2.jpg" alt="ציור דנה טולר" style="width:100%;object-fit:cover;border-radius:4px;margin-bottom:1.5rem;display:block;">
       <p style="text-align:center;font-size:0.85rem;color:#888;margin-bottom:0.5rem;font-style:italic;">ריקוד סופי</p>
-      <img src="https://static.wixstatic.com/media/e07c18_ac251cf3116b409aa705d0b30fad1ab9~mv2.jpg" alt="ריקוד סופי — דנה טולר" style="width:100%;object-fit:cover;border-radius:4px;margin-bottom:1.5rem;display:block;">
+      <img src="https://static.wixstatic.com/media/e07c18_ac251cf3116b409aa705d0b30fad1ab9~mv2.jpg" alt="ריקוד סופי — דנה טולר" style="width:50%;max-width:350px;object-fit:contain;border-radius:4px;margin-bottom:1.5rem;display:block;margin-right:auto;margin-left:auto;">
       <img src="https://static.wixstatic.com/media/e07c18_e7a4ea3087a649e2b34ab3d65fc64a77~mv2.jpg" alt="ציור דנה טולר" style="width:100%;object-fit:cover;border-radius:4px;margin-bottom:1.5rem;display:block;">
 
       <div class="highlight-box" style="margin-top:2.5rem;">
@@ -1220,7 +1228,7 @@
     </div>
 
     <div style="text-align:center;margin-top:2rem;">
-      <button onclick="window.scrollTo({top:0,behavior:'smooth'});document.body.scrollTop=0;document.documentElement.scrollTop=0;" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
+      <button onclick="var h=document.querySelector('.page.active');if(h){h.scrollIntoView({behavior:'smooth',block:'start'});}" style="font-size:1rem;color:#6B4FA0;cursor:pointer;background:none;border:1px solid #D5D3E8;padding:0.6rem 1.5rem;border-radius:25px;font-family:'Heebo',sans-serif;touch-action:manipulation;" title="חזרה לראש המאמר">לראש המאמר ↑</button>
     </div>
     <div class="article-nav">
       <button class="nav-btn" onclick="showArticle('hod')">→ הקודם</button>
@@ -1283,6 +1291,22 @@
   }
 
   function scrollToTop() { scrollTop(); }
+
+  // Show back-to-top when in article
+  function updateBackToTop() {
+    var btn = document.getElementById('backToTop');
+    if (!btn) return;
+    var active = document.querySelector('.page.active');
+    var inArticle = active && active.id !== 'home';
+    if (inArticle) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', updateBackToTop);
+  setInterval(updateBackToTop, 500);
 </script>
 </body>
 </html>
