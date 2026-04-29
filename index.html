@@ -427,13 +427,13 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 3px 12px rgba(0,0,0,0.25);
-    z-index: 999;
+    z-index: 9999;
     touch-action: manipulation;
     opacity: 0.85;
     transition: opacity 0.2s;
   }
   .back-to-top:hover { opacity: 1; }
-  .back-to-top.visible { display: flex; }
+  .back-to-top.visible { display: none; }  /* replaced by sticky button */
 </style>
 </head>
 <body>
@@ -589,6 +589,12 @@
 <!-- ══════════════════════════════════════════ -->
 <div id="article-shai" class="page"><div id="top-shai"></div>
   <div class="article-page">
+    <div style="position:sticky;top:2rem;float:right;z-index:999;width:0;overflow:visible;">
+      <button onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" style="background:var(--accent2);color:white;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;touch-action:manipulation;opacity:0.85;" title="למעלה">
+        <span style="font-size:1rem;line-height:1;">↑</span>
+        <span style="font-size:0.45rem;line-height:1;">למעלה</span>
+      </button>
+    </div>
     <div class="article-meta">
       <div class="article-number">01</div>
       <h1>מחשבות על גברים — מלחמה — גוף — והחלמה</h1>
@@ -649,6 +655,12 @@
 <!-- ══════════════════════════════════════════ -->
 <div id="article-adi" class="page"><div id="top-adi"></div>
   <div class="article-page">
+    <div style="position:sticky;top:2rem;float:right;z-index:999;width:0;overflow:visible;">
+      <button onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" style="background:var(--accent2);color:white;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;touch-action:manipulation;opacity:0.85;" title="למעלה">
+        <span style="font-size:1rem;line-height:1;">↑</span>
+        <span style="font-size:0.45rem;line-height:1;">למעלה</span>
+      </button>
+    </div>
     <div class="article-meta">
       <div class="article-number">02</div>
       <h1>גם וגם: על נוכחות בעתות מלחמה</h1>
@@ -782,6 +794,12 @@
 <!-- ══════════════════════════════════════════ -->
 <div id="article-naama" class="page"><div id="top-naama"></div>
   <div class="article-page">
+    <div style="position:sticky;top:2rem;float:right;z-index:999;width:0;overflow:visible;">
+      <button onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" style="background:var(--accent2);color:white;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;touch-action:manipulation;opacity:0.85;" title="למעלה">
+        <span style="font-size:1rem;line-height:1;">↑</span>
+        <span style="font-size:0.45rem;line-height:1;">למעלה</span>
+      </button>
+    </div>
     <div class="article-meta">
       <div class="article-number">03</div>
       <h1>על מלחמה, תפיסה ופרקטיקות גוף-נפש</h1>
@@ -935,6 +953,12 @@
 <!-- ══════════════════════════════════════════ -->
 <div id="article-chen" class="page"><div id="top-chen"></div>
   <div class="article-page">
+    <div style="position:sticky;top:2rem;float:right;z-index:999;width:0;overflow:visible;">
+      <button onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" style="background:var(--accent2);color:white;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;touch-action:manipulation;opacity:0.85;" title="למעלה">
+        <span style="font-size:1rem;line-height:1;">↑</span>
+        <span style="font-size:0.45rem;line-height:1;">למעלה</span>
+      </button>
+    </div>
     <div class="article-meta">
       <div class="article-number">04</div>
       <h1>האדם הראשון</h1>
@@ -988,6 +1012,12 @@
 <!-- ══════════════════════════════════════════ -->
 <div id="article-chen2" class="page"><div id="top-chen2"></div>
   <div class="article-page">
+    <div style="position:sticky;top:2rem;float:right;z-index:999;width:0;overflow:visible;">
+      <button onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" style="background:var(--accent2);color:white;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;touch-action:manipulation;opacity:0.85;" title="למעלה">
+        <span style="font-size:1rem;line-height:1;">↑</span>
+        <span style="font-size:0.45rem;line-height:1;">למעלה</span>
+      </button>
+    </div>
     <div class="article-meta">
       <div class="article-number">04ב</div>
       <h1>מלחמת העולם הפנימית</h1>
@@ -1042,6 +1072,12 @@
 <!-- ══════════════════════════════════════════ -->
 <div id="article-roi" class="page"><div id="top-roi"></div>
   <div class="article-page">
+    <div style="position:sticky;top:2rem;float:right;z-index:999;width:0;overflow:visible;">
+      <button onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" style="background:var(--accent2);color:white;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;touch-action:manipulation;opacity:0.85;" title="למעלה">
+        <span style="font-size:1rem;line-height:1;">↑</span>
+        <span style="font-size:0.45rem;line-height:1;">למעלה</span>
+      </button>
+    </div>
     <div class="article-meta">
       <div class="article-number">05</div>
       <h1>השתקפויות</h1>
@@ -1103,6 +1139,12 @@
 <!-- ══════════════════════════════════════════ -->
 <div id="article-michaela" class="page"><div id="top-michaela"></div>
   <div class="article-page">
+    <div style="position:sticky;top:2rem;float:right;z-index:999;width:0;overflow:visible;">
+      <button onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" style="background:var(--accent2);color:white;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;touch-action:manipulation;opacity:0.85;" title="למעלה">
+        <span style="font-size:1rem;line-height:1;">↑</span>
+        <span style="font-size:0.45rem;line-height:1;">למעלה</span>
+      </button>
+    </div>
     <div class="article-meta">
       <div class="article-number">06</div>
       <h1>בין משבר לתקווה</h1>
@@ -1158,6 +1200,12 @@
 <!-- ══════════════════════════════════════════ -->
 <div id="article-hod" class="page"><div id="top-hod"></div>
   <div class="article-page">
+    <div style="position:sticky;top:2rem;float:right;z-index:999;width:0;overflow:visible;">
+      <button onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" style="background:var(--accent2);color:white;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;touch-action:manipulation;opacity:0.85;" title="למעלה">
+        <span style="font-size:1rem;line-height:1;">↑</span>
+        <span style="font-size:0.45rem;line-height:1;">למעלה</span>
+      </button>
+    </div>
     <div class="article-meta">
       <div class="article-number">07</div>
       <h1>במערב אין כל חדש, האומנם?</h1>
@@ -1207,6 +1255,12 @@
 <!-- ══════════════════════════════════════════ -->
 <div id="article-dana" class="page"><div id="top-dana"></div>
   <div class="article-page">
+    <div style="position:sticky;top:2rem;float:right;z-index:999;width:0;overflow:visible;">
+      <button onclick="window.scrollTo(0,0);document.body.scrollTop=0;document.documentElement.scrollTop=0;var h=document.querySelector('header');if(h)h.scrollIntoView({block:'start'});" style="background:var(--accent2);color:white;border:none;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;touch-action:manipulation;opacity:0.85;" title="למעלה">
+        <span style="font-size:1rem;line-height:1;">↑</span>
+        <span style="font-size:0.45rem;line-height:1;">למעלה</span>
+      </button>
+    </div>
     <div class="article-meta">
       <div class="article-number">08</div>
       <h1>שירה וציור – מזור לתחושות לא מדוברות</h1>
